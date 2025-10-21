@@ -7,3 +7,24 @@ body{
   border: 2px solid white;   
   border-radius: 10px;
 }      
+
+
+.btn-floating .fa-facebook-f:hover {
+  color: #3b5998 !important;
+}
+
+.btn-floating .fa-twitter:hover {
+  color: #00acee !important;
+}
+
+.btn-floating .fa-google:hover {
+  color: #db4a39 !important;
+}
+
+
+.btn-floating:hover i {
+  transform: scale(1.1);
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+

@@ -16,7 +16,7 @@ function Home() {
     return (
         <>
         <header className="bg-light shadow text-center py-4  ">
-            <h1>Welcome to the Book App</h1>
+            <h1>Welcome to Book App</h1>
         </header>
 
         <section className="my-5 container">
@@ -33,26 +33,42 @@ function Home() {
 
                  </thead> 
                  <tbody>
-                      {                
-                    books.map((book) => (
+                  {
+                    books.length ? (
+                        books.map((book) => (
                         <tr key={book.id}>
-                        <td>{book.id}</td>
-                        <td>{book.title}</td>
-                        <td>{book.price}</td>
-                        <td>{book.author}</td>
-                        <td>{book.description}</td>
-                        <td>
-                            <Link className="btn btn-sm btn-info mx-1" to={'/details/${book.id}'}>Details</Link>
-                            <Link className="tn btn-sm btn-info mx-1" >Edit</Link>
-                            <button className="tn btn-sm btn-info mx-1">Delete</button>
-                        </td>
+                            <td className='align-middle'>{book.id}</td>
+                            <td className='align-middle'>{book.title}</td>
+                            <td className='align-middle'>{book.price}</td>
+                            <td className='align-middle'>{book.author}</td>
+                            <td className='align-middle'>{book.desc}</td>
+                            <td >
+                                <div className='d-flex flex-column flex-md-row gap-1'>
+
+                            <Link className="btn btn-sm btn-info mx-1" to={`/details/${book.id}`}>
+                                Details
+                            </Link>
+                            <Link className="btn btn-sm btn-warning mx-1 "to={`/edit/${book.id}`}>
+                                Edit
+                            </Link>
+                            <button className="btn btn-sm btn-danger mx-1">
+                                Delete
+                            </button>
+                                </div>
+                            </td>
                         </tr>
-                    ))
-                     }
+                        ))
+                    ) : (
+                        <tr>
+                        <td colSpan="6" className="text-center">No books found</td>
+                        </tr>
+                    )
+                    }
 
                     
                     </tbody>     
             </table>
+            
         </section>
         </>
      );
