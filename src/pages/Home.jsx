@@ -103,10 +103,3 @@ function Home() {
 export default Home;
 <>
 </>
-//{
-//  "books": [
-//    { "id": 1, "title": "Book One", "author": "Author One","price": "20$", "year": 2001, "desc": "This is the description of Book One." },
-//    { "id": 2, "title": "Book Two", "author": "Author Two","price": "25$", "year": 2005, "desc": "This is the description of Book Two." },
-//    { "id": 3, "title": "Book Three", "author": "Author Three","price": "30$", "year": 2010, "desc": "This is the description of Book Three." }
-//  ]
-//}
