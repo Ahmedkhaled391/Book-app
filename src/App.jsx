@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import Details from './pages/Details'
 import Edit from './pages/Edit'
 
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -24,7 +25,8 @@ function App() {
         <Route path="/details/:id" element={<Details />} />
         <Route path="/edit/:id" element={<Edit />} />
         <Route path="*" element={<PageNotFound />} />
-      </Routes>
+        
+      </Routes> 
       <Footer />
     </BrowserRouter>
     </>

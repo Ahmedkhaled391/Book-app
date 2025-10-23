@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { getBooks } from '../services/book.service'
 import { Link } from "react-router-dom";
+import { deleteBook } from '../services/book.service';
+import Swal from 'sweetalert2';
 
 
 function Home() {
@@ -10,13 +12,37 @@ function Home() {
         getBooks().then(data => setBooks(data));
     },[]);
     
-    
+    const delBook=(id)=>{
+                const confirmResult=Swal.fire({
+                    title:"Are you sure?",
+                    text:"You won't be able to revert this!",
+                    icon:"warning",
+                    showCancelButton:true,
+                    confirmButtonColor:"#3085d6",
+                    cancelButtonColor:"#d33",
+                    confirmButtonText:"Yes, delete it!"
+                }).then((result)=>{
+                    if(result.isConfirmed){
+                        deleteBook(id).then(()=>{
+                            Swal.fire(
+                                'Deleted!',
+                                'Your book has been deleted.',
+                                'success'
+                            );
+                            
+                            setBooks(books.filter(book => book.id !== id));
+                        });
+                    }
+                });      
+        
+
+    }
    
 
     return (
         <>
         <header className="bg-light shadow text-center py-4  ">
-            <h1>Welcome to Book App</h1>
+            <h1>Welcome to your Book App</h1>
         </header>
 
         <section className="my-5 container">
@@ -43,7 +69,7 @@ function Home() {
                             <td className='align-middle'>{book.author}</td>
                             <td className='align-middle'>{book.desc}</td>
                             <td >
-                                <div className='d-flex flex-column flex-md-row gap-1'>
+                                <div className='d-flex flex-column flex-md-row gap-1 justify-content-center'>
 
                             <Link className="btn btn-sm btn-info mx-1" to={`/details/${book.id}`}>
                                 Details
@@ -51,7 +77,7 @@ function Home() {
                             <Link className="btn btn-sm btn-warning mx-1 "to={`/edit/${book.id}`}>
                                 Edit
                             </Link>
-                            <button className="btn btn-sm btn-danger mx-1">
+                            <button className="btn btn-sm btn-danger mx-1" onClick={() => delBook(book.id)}>
                                 Delete
                             </button>
                                 </div>
@@ -77,3 +103,10 @@ function Home() {
 export default Home;
 <>
 </>
+//{
+//  "books": [
+//    { "id": 1, "title": "Book One", "author": "Author One","price": "20$", "year": 2001, "desc": "This is the description of Book One." },
+//    { "id": 2, "title": "Book Two", "author": "Author Two","price": "25$", "year": 2005, "desc": "This is the description of Book Two." },
+//    { "id": 3, "title": "Book Three", "author": "Author Three","price": "30$", "year": 2010, "desc": "This is the description of Book Three." }
+//  ]
+//}

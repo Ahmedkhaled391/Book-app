@@ -1,81 +1,18 @@
 {
   "books": [
     {
-      "id": "1",
-      "title": "The Last Algorithm",
-      "price": "50$",
-      "author": "Ahmed Khaled",
-      "desc": "A compact guide to problem solving and algorithm design with practical C++ examples."
+      "id": "0f2e",
+      "title": "C#",
+      "price": "30$",
+      "author": "Ahmed",
+      "desc": "Fundamentals of C#"
     },
     {
-      "id": "9054",
-      "title": "Hello world",
-      "price": "4$",
-      "author": "Ahmed khaled",
-      "desc": "Hello world!"
-    },
-    {
-      "id": "29b7",
-      "title": "Ahmed ",
-      "price": "60$",
-      "author": "dfd",
-      "desc": "dfdfadsf"
-    },
-    {
-      "id": "a0a2",
-      "title": "dfa",
-      "price": "sadf",
-      "author": "dsfa",
-      "desc": "dsaf"
-    },
-    {
-      "id": "f67e",
-      "title": "asdf",
-      "price": "adfd",
-      "author": "sadf",
-      "desc": "fdasfdf"
-    },
-    {
-      "id": "a3cd",
-      "title": "dasfad",
-      "price": "dasf",
-      "author": "asdf",
-      "desc": "fas"
-    },
-    {
-      "id": "d93f",
-      "title": "fasdf",
-      "price": "adsf",
-      "author": "adfd",
-      "desc": "adsfds"
-    },
-    {
-      "id": "c0af",
-      "title": "adfa",
-      "price": "asfd",
-      "author": "adf",
-      "desc": "adsf"
-    },
-    {
-      "id": "7efb",
-      "title": "sg",
-      "price": "df",
-      "author": "daf",
-      "desc": "dasf"
-    },
-    {
-      "id": "6c1e",
-      "title": "fg",
-      "price": "fsgf",
-      "author": "sfdgfd",
-      "desc": "fsdgf"
-    },
-    {
-      "id": "1",
-      "title": "The Last Algorithm",
-      "price": "50$",
-      "author": "Ahmed Khaled",
-      "desc": "A compact guide to problem solving and algorithm design with practical C++ examples."
+      "id": "bd0c",
+      "title": "DSA",
+      "price": "10$",
+      "author": "Ahmed",
+      "desc": "Fundamentals of data structures and algorithms"
     }
   ]
 }

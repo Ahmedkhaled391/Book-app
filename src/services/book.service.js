@@ -23,5 +23,9 @@ export async function editBook(id,book){
   const res = await axios.put(`${url}/${id}`,book);
 }
 
+export async function deleteBook(id){
+  const res = await axios.delete(`${url}/${id}`)
+}
+
 
 
